@@ -6,6 +6,8 @@ package com.usa.ciclo4.com.usa.ciclo4.controllers;
 
 import com.usa.ciclo4.com.usa.ciclo4.model.Gadget;
 import com.usa.ciclo4.com.usa.ciclo4.service.GadgetService;
+import java.util.Collection;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,7 +54,7 @@ public class GadgetController {
     
     @PutMapping("/update")
     @ResponseStatus(HttpStatus.CREATED)
-    public Gadget update(@RequestBody Gadget gadget){
+    public Gadget update(@RequestBody Gadget gadget){ 
         return gadgetService.update(gadget);
     }
     
