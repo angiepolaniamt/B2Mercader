@@ -37,7 +37,7 @@ public class GadgetService {
     public Gadget update(Gadget gadget){
         if(gadget.getId()!=null){
             Optional<Gadget> dbGadget = gadgetRepository.getGadget(gadget.getId());
-            if(!!dbGadget.isEmpty()){
+            if(!dbGadget.isEmpty()){
                 if(gadget.getBrand()!=null){
                     dbGadget.get().setBrand(gadget.getBrand());
                 }
