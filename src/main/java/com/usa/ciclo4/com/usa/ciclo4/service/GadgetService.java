@@ -50,13 +50,15 @@ public class GadgetService {
                 if(gadget.getDescription()!=null){
                     dbGadget.get().setDescription(gadget.getDescription());
                 }
-                if(gadget.getPrice()!= 0.0){
+                if(gadget.getPrice()!= null){
                     dbGadget.get().setPrice(gadget.getPrice());
                 }
                 
-                dbGadget.get().setAvailability(gadget.isAvailability());
+                if(gadget.getAvailability() != null){
+                dbGadget.get().setAvailability(gadget.getAvailability());
+                }
                 
-                if(gadget.getQuantity()!=0){
+                if(gadget.getQuantity()!=null){
                     dbGadget.get().setQuantity(gadget.getQuantity());
                 }
                 if(gadget.getPhotography()!=null){
